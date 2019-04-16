@@ -21,8 +21,11 @@ class PopoverView: UIView {
     }
 
     func createSubViews() {
-        translatesAutoresizingMaskIntoConstraints = false
-        backgroundColor = .yellow
+        //translatesAutoresizingMaskIntoConstraints = false
+        
+        autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        backgroundColor = .clear // .yellow
         
         addSubview(blueBox)
         
