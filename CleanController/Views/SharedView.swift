@@ -21,9 +21,9 @@ class SharedView: UIView {
 
     func createSubViews() {
         
-        translatesAutoresizingMaskIntoConstraints = false
+        //translatesAutoresizingMaskIntoConstraints = true
         
-        backgroundColor = .yellow //UIColor(white: 0.9, alpha: 1)
+        backgroundColor = .yellow
         
         let blueBox: UIView = {
             let bb = UIView()
@@ -37,13 +37,9 @@ class SharedView: UIView {
         
         addSubview(blueBox)
         
-//        blueBox.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor).isActive = true
-//        blueBox.centerYAnchor.constraint(equalTo: safeAreaLayoutGuide.centerYAnchor).isActive = true
-        
         blueBox.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         blueBox.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        blueBox.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        blueBox.widthAnchor.constraint(equalToConstant: 200).isActive = true
-
+        blueBox.heightAnchor.constraint(equalTo: self.heightAnchor, multiplier: 0.7).isActive = true
+        blueBox.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4).isActive = true
     }
 }

@@ -21,6 +21,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //definesPresentationContext = true
+        
         self.view.backgroundColor = .red
         
         self.view.addSubview(boxButton)
@@ -31,6 +34,13 @@ class MainViewController: UIViewController {
     
     @objc func boxButtonTapped() {
         
+        
+        let vc = SharedController()
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
+        
+        present(vc, animated: true, completion: nil)
     }
 }
 
