@@ -1,14 +1,15 @@
-//
-//  SharedView.swift
-//  CleanController
-//
-//  Created by Øystein Günther on 16/04/2019.
-//  Copyright © 2019 Øystein Günther. All rights reserved.
-//
-
 import UIKit
 
-class SharedView: UIView {
+class PopoverView: UIView {
+    
+    let blueBox: UIView = {
+        let bb = UIView()
+        bb.backgroundColor = .blue
+        //bb.frame.size = CGSize(width: 100, height: 100)
+        bb.translatesAutoresizingMaskIntoConstraints = false
+        return bb
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         createSubViews()
@@ -20,20 +21,8 @@ class SharedView: UIView {
     }
 
     func createSubViews() {
-        
-        //translatesAutoresizingMaskIntoConstraints = true
-        
+        translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = .yellow
-        
-        let blueBox: UIView = {
-            let bb = UIView()
-            bb.backgroundColor = .blue
-            //bb.frame.size = CGSize(width: 100, height: 100)
-            
-            bb.translatesAutoresizingMaskIntoConstraints = false
-            
-            return bb
-        }()
         
         addSubview(blueBox)
         

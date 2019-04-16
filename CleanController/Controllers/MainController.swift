@@ -1,18 +1,10 @@
-//
-//  ViewController.swift
-//  CleanController
-//
-//  Created by Øystein Günther on 16/04/2019.
-//  Copyright © 2019 Øystein Günther. All rights reserved.
-//
-
 import UIKit
 
 class MainViewController: UIViewController {
 
     let boxButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Show box", for: .normal)
+        button.setTitle("Show popover", for: .normal)
         button.frame.size = CGSize(width: 100, height: 100)
         button.addTarget(self, action: #selector(boxButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -22,10 +14,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //definesPresentationContext = true
-        
         self.view.backgroundColor = .red
-        
         self.view.addSubview(boxButton)
         
         boxButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
@@ -33,14 +22,11 @@ class MainViewController: UIViewController {
     }
     
     @objc func boxButtonTapped() {
-        
-        
-        let vc = SharedController()
-        
+        let vc = PopoverController()
         vc.modalPresentationStyle = .overCurrentContext
         vc.modalTransitionStyle = .crossDissolve
-        
         present(vc, animated: true, completion: nil)
+        print("boxButtonTapped")
     }
 }
 
