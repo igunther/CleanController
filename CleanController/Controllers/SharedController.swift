@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SharedController.swift
 //  CleanController
 //
 //  Created by Øystein Günther on 16/04/2019.
@@ -8,11 +8,15 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class SharedController: UIViewController {
 
+    var sharedView = SharedView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+    }
+    
+    override func loadView() {
+        view = sharedView
     }
 }
-
