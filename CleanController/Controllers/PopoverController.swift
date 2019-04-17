@@ -6,11 +6,13 @@ class PopoverController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("shouldAutorotate: \(shouldAutorotate)")
     }
     
     override func loadView() {
         view = popoverView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        popoverView.updateConstraints()
     }
 }
