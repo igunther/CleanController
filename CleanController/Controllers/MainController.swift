@@ -32,6 +32,23 @@ class MainViewController: UIViewController {
         
         popoverFromSourceViewButton.topAnchor.constraint(equalTo: blueCenteredBoxButton.topAnchor, constant: 100).isActive = true
         popoverFromSourceViewButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
+        let dismissTapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissPopover(_:)))
+        view.addGestureRecognizer(dismissTapGesture)
+    }
+    
+    let popoverFromSourceController = PopoverFromSourceController()
+    
+    @objc func dismissPopover(_ sender: UITapGestureRecognizer) {
+        if sender.state == UIGestureRecognizer.State.ended {
+            let point = sender.location(in: view)
+            
+            print("Tapped")
+            
+            if !self.view.frame.contains(point) {
+                // We have tapped outside the popover
+            }
+        }
     }
     
     @objc func blueCenteredBoxButtonTapped() {
@@ -42,7 +59,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func popoverFromSourceViewButtonTapped() {
-        let popoverFromSourceController = PopoverFromSourceController()
+        
         popoverFromSourceController.modalPresentationStyle = .popover
         popoverFromSourceController.preferredContentSize = CGSize(width: 200, height: 300)
         popoverFromSourceController.isModalInPopover = false
