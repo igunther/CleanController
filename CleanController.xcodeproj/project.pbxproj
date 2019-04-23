@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A819B33B226F2B8800C2B099 /* PopoverFromSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A819B33A226F2B8800C2B099 /* PopoverFromSourceController.swift */; };
+		A819B33D226F2BBF00C2B099 /* PopoverFromSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A819B33C226F2BBF00C2B099 /* PopoverFromSourceView.swift */; };
 		A84699962265E4580015B79C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84699952265E4580015B79C /* AppDelegate.swift */; };
 		A84699982265E4580015B79C /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84699972265E4580015B79C /* MainController.swift */; };
 		A846999D2265E4590015B79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A846999C2265E4590015B79C /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A819B33A226F2B8800C2B099 /* PopoverFromSourceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverFromSourceController.swift; sourceTree = "<group>"; };
+		A819B33C226F2BBF00C2B099 /* PopoverFromSourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverFromSourceView.swift; sourceTree = "<group>"; };
 		A84699922265E4580015B79C /* CleanController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A84699952265E4580015B79C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A84699972265E4580015B79C /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
@@ -37,10 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A819B33E226F36CC00C2B099 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A846999E2265E4590015B79C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A84699892265E4580015B79C = {
 			isa = PBXGroup;
 			children = (
 				A84699942265E4580015B79C /* CleanController */,
+				A819B33E226F36CC00C2B099 /* Storyboards */,
 				A84699932265E4580015B79C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,7 +73,6 @@
 				A84699A7226631920015B79C /* Views */,
 				A84699952265E4580015B79C /* AppDelegate.swift */,
 				A846999C2265E4590015B79C /* Assets.xcassets */,
-				A846999E2265E4590015B79C /* LaunchScreen.storyboard */,
 				A84699A12265E4590015B79C /* Info.plist */,
 			);
 			path = CleanController;
@@ -70,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				A84699AB226631F50015B79C /* PopoverView.swift */,
+				A819B33C226F2BBF00C2B099 /* PopoverFromSourceView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +92,7 @@
 			children = (
 				A84699972265E4580015B79C /* MainController.swift */,
 				A84699AD226632120015B79C /* PopoverController.swift */,
+				A819B33A226F2B8800C2B099 /* PopoverFromSourceController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +167,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A819B33B226F2B8800C2B099 /* PopoverFromSourceController.swift in Sources */,
+				A819B33D226F2BBF00C2B099 /* PopoverFromSourceView.swift in Sources */,
 				A84699AE226632120015B79C /* PopoverController.swift in Sources */,
 				A84699AC226631F50015B79C /* PopoverView.swift in Sources */,
 				A84699982265E4580015B79C /* MainController.swift in Sources */,
