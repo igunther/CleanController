@@ -45,10 +45,11 @@ class MainViewController: UIViewController {
         let popoverFromSourceController = PopoverFromSourceController()
         popoverFromSourceController.modalPresentationStyle = .popover
         popoverFromSourceController.preferredContentSize = CGSize(width: 200, height: 300)
-       
-        let presentationController = popoverFromSourceController.popoverPresentationController
-        presentationController?.sourceView = self.popoverFromSourceViewButton
+        popoverFromSourceController.isModalInPopover = false
         
+        let presentationController = popoverFromSourceController.popoverPresentationController
+        presentationController?.sourceView = popoverFromSourceViewButton
+                
         present(popoverFromSourceController, animated: true)
     }
 }
